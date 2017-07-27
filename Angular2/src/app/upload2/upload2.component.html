@@ -1,0 +1,14 @@
+<p>
+  upload2 works!
+</p>
+<form method="post" enctype="multipart/form-data">
+  <div class="box-body">
+    <div class="form-group">
+      <label>Identification to upload</label>
+      <input type="file" ng2FileSelect [uploader]="uploader" />
+    </div>
+  </div>
+  <div class="box-footer">
+    <button type="button" class="btn btn-primary" (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">Upload</button>
+  </div>
+</form>
